@@ -10323,6 +10323,9 @@ void EXT_FUNC CBasePlayer::__API_HOOK(OnSpawnEquip)(bool addDefault, bool equipG
 		case ARMOR_VESTHELM: GiveNamedItemEx("item_assaultsuit"); break;
 		}
 	}
+
+	if ((int)defuser_allocation.value == DEFUSERALLOCATION_ALL)
+		GiveNamedItemEx("item_thighpack");
 #endif
 }
 
