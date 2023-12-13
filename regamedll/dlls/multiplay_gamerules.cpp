@@ -5421,7 +5421,7 @@ void CHalfLifeMultiplay::GiveDefuserToRandomPlayer()
 	for ( int i = 0; i < iDefusersToGive && i < candidates.Count(); ++i )
 	{
 		CBasePlayer *pPlayer = candidates[i];
-		Assert( pPlayer && pPlayer->m_iTeam == CT && pPlayer->IsAlive() );
+		assert( pPlayer && pPlayer->m_iTeam == CT && pPlayer->IsAlive() );
 
 		pPlayer->GiveDefuser();
 		ClientPrint(pPlayer->pev, HUD_PRINTCENTER, "#Got_defuser");
