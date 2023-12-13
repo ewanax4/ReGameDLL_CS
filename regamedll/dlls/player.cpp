@@ -10324,7 +10324,7 @@ void EXT_FUNC CBasePlayer::__API_HOOK(OnSpawnEquip)(bool addDefault, bool equipG
 		}
 	}
 
-	if ((int)defuser_allocation.value == DEFUSERALLOCATION_ALL)
+	if (NeedsDefuseKit() && (int)defuser_allocation.value == DEFUSERALLOCATION_ALL)
 		GiveNamedItemEx("item_thighpack");
 #endif
 }
