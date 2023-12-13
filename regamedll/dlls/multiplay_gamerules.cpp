@@ -5418,10 +5418,10 @@ void CHalfLifeMultiplay::GiveDefuserToRandomPlayer()
 	);
 
 	// give defusers to the first N candidates
-	for ( int i = 0; i < iDefusersToGive && i < candidates.Count(); ++i )
+	for (int i = 0; i < iDefusersToGive && i < candidates.Count(); ++i)
 	{
 		CBasePlayer *pPlayer = candidates[i];
-		assert( pPlayer && pPlayer->m_iTeam == CT && pPlayer->IsAlive() );
+		assert(pPlayer && pPlayer->m_iTeam == CT && pPlayer->IsAlive());
 
 		pPlayer->GiveDefuser();
 		ClientPrint(pPlayer->pev, HUD_PRINTCENTER, "#Got_defuser");
